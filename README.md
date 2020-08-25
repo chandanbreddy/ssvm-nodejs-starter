@@ -1,3 +1,5 @@
+
+Application to create fibbonaci series 
 # Getting started
 
 ![Build and test](https://github.com/second-state/ssvm-nodejs-starter/workflows/Build%20and%20test/badge.svg)
