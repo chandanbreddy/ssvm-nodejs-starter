@@ -8,32 +8,21 @@
 * The JavaScript functions are in the `node` directory and they can access the Rust functions.
 * Use the `node node/app.js` command to run the application in Node.js.
 
-
 ## Use Docker to build and run
 
 ```
-$ docker pull secondstate/ssvm-nodejs-starter:v1
-$ docker run -p 3000:3000 --rm -it -v $(pwd):/app secondstate/ssvm-nodejs-starter:v1
+$ docker build -t ssvm-nodejs:v1 .
+$ docker run -p 3000:3000 --rm -it -v $(pwd):/app ssvm-nodejs:v1
 (docker) # cd /app
 (docker) # ssvmup build
 (docker) # node node/app.js
 ```
 
-From a second terminal window, you can test the local server.
-
-```
-$ curl http://localhost:3000/?name=SSVM
-hello SSVM
-```
-
-
-## Use VSCode Codespace
-
-<p>
-    <a href="https://online.visualstudio.com/environments/new?name=Rust%20and%20WebAssembly%20in%20Node.js&repo=second-state/ssvm-nodejs-starter">
-        <img src="https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Faka.ms%2Fvso-badge">
-    </a>
-</p>
+### How to use to use 
+- run the app. 
+- post file into localhost:3000/upload with form-data header using 'file' payload with your image
+- send.
+- save respond to png.
 
 ![SSVM](https://github.com/second-state/blog/blob/master/static/images/SSVM-edited-without-music.gif?raw=true)
 
